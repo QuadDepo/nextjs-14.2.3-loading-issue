@@ -3,10 +3,11 @@ import { Metadata } from "next";
 export const runtime = "edge";
 
 export async function generateMetadata(): Promise<Metadata> {
-  console.log("generateMetadata");
+  console.log("generateMetadata");  
   const data = await fetch("https://swapi.dev/api/people/1");
   const json = await data.json();
   await new Promise((resolve) => setTimeout(resolve, 3000));
+
 
   return {
     title: json.name,
