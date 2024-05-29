@@ -2,6 +2,8 @@ import { Metadata } from "next";
 
 import { unstable_cache } from 'next/cache';
 
+export const runtime = "edge";
+
 async function getData() {
   'use server';
   try {
