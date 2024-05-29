@@ -2,7 +2,7 @@ import { Metadata } from "next";
 
 import { unstable_cache } from 'next/cache';
 
-export async function getData() {
+async function getData() {
   'use server';
   try {
     const data = await fetch("https://swapi.dev/api/people/1");
